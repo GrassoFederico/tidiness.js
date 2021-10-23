@@ -4,7 +4,9 @@
   "description": "Syntax highlighter javascript plugin",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack serve --open --config webpack.dev.js",
+    "prod": "webpack --config webpack.prod.js"
   },
   "repository": {
     "type": "git",
@@ -23,5 +25,12 @@
   "bugs": {
     "url": "https://github.com/GrassoFederico/colorize.js/issues"
   },
-  "homepage": "https://github.com/GrassoFederico/colorize.js#readme"
+  "homepage": "https://github.com/GrassoFederico/colorize.js#readme",
+  "devDependencies": {
+    "html-webpack-plugin": "^5.4.0",
+    "path": "^0.12.7",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.3.1",
+    "webpack-merge": "^5.8.0"
+  }
 }
