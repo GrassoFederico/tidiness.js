@@ -1,0 +1,27 @@
+{
+  "name": "colorize.js",
+  "version": "1.0.0",
+  "description": "Syntax highlighter javascript plugin",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GrassoFederico/colorize.js.git"
+  },
+  "keywords": [
+    "Highlighter",
+    "Syntax",
+    "Code",
+    "Color",
+    "Colorize",
+    "Plugin"
+  ],
+  "author": "Grasso Federico",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GrassoFederico/colorize.js/issues"
+  },
+  "homepage": "https://github.com/GrassoFederico/colorize.js#readme"
+}
