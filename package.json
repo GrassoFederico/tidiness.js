@@ -1,5 +1,5 @@
 {
-  "name": "colorize.js",
+  "name": "colr.js",
   "version": "1.0.0",
   "description": "Syntax highlighter javascript plugin",
   "main": "index.js",
