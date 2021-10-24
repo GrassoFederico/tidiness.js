@@ -8,6 +8,8 @@ import {
     isUndefined
 } from "lodash"
 
+import 'remixicon/fonts/remixicon.css'
+
 Object.values(document.querySelectorAll('*[colorize]')).map((jsonElement) => {
     let jsonObject = JSON.parse(jsonElement.innerHTML)
     let text = document.createElement('code')

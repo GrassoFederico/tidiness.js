@@ -27,11 +27,16 @@
   },
   "homepage": "https://github.com/GrassoFederico/colorize.js#readme",
   "devDependencies": {
+    "css-loader": "^6.4.0",
     "html-webpack-plugin": "^5.4.0",
     "lodash": "^4.17.21",
     "path": "^0.12.7",
+    "style-loader": "^3.3.1",
     "webpack-cli": "^4.9.1",
     "webpack-dev-server": "^4.3.1",
     "webpack-merge": "^5.8.0"
+  },
+  "dependencies": {
+    "remixicon": "^2.5.0"
   }
 }
