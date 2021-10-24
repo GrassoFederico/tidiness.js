@@ -7,4 +7,7 @@ module.exports = merge(common, {
     devServer: {
         static: './dist',
     },
+    entry: {
+        app: './src/index.js',
+    },
 });

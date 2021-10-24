@@ -27,9 +27,6 @@ module.exports = {
             ],
         }, ],
     },
-    entry: {
-        app: './src/index.js',
-    },
     plugins: [
         new HtmlWebpackPlugin({
             title: package.name,
