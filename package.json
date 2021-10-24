@@ -28,6 +28,7 @@
   "homepage": "https://github.com/GrassoFederico/colorize.js#readme",
   "devDependencies": {
     "html-webpack-plugin": "^5.4.0",
+    "lodash": "^4.17.21",
     "path": "^0.12.7",
     "webpack-cli": "^4.9.1",
     "webpack-dev-server": "^4.3.1",
