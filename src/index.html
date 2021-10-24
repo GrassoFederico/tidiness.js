@@ -1,27 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= htmlWebpackPlugin.options.title %></title>
 </head>
+
 <body>
-    <div colorize>
-        {
-            "colorize": {
-                "extension": "js",
-                "description": "Syntax highlighter javascript plugin"
-            }
-        }
-    </div>
-    <div colorize>
-        {
-            "colorize": {
-                "extension": "js",
-                "description": "Syntax highlighter javascript plugin"
-            }
-        }
-    </div>
+    <h1>Colorize.js</h1>
+    <p><b>Colorize.js</b> gives you the opportunity to transform this piece of JSON data:</p>
+    <div class="example-json"></div>
+    <p>Into this:</p>
+    <div class="example-json" colorize></div>
+
+    <a href="https://mtgjson.com" style="display: inline-flex; align-items: center;"><img
+            src="http://mtgjson.com/images/assets/logo-mtgjson-light-blue.svg" width="60px" title="MTGJSON logo">
+        <p style="margin-left: 10px">Powered by MTGJSON</p>
+    </a>
 </body>
+
 </html>
