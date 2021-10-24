@@ -9,10 +9,11 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             title: package.name,
+            template: './src/index.html'
         }),
     ],
     output: {
-        filename: '[name].bundle.js',
+        filename: 'colorize.js',
         path: path.resolve(__dirname, 'dist'),
         clean: true,
     },
