@@ -1,5 +1,5 @@
 {
-  "name": "colr.js",
+  "name": "tidiness.js",
   "version": "1.0.0",
   "description": "Syntax highlighter javascript plugin",
   "main": "index.js",
@@ -16,8 +16,8 @@
     "Highlighter",
     "Syntax",
     "Code",
-    "Color",
-    "Colorize",
+    "Tidy",
+    "Tidy Up",
     "Plugin"
   ],
   "author": "Grasso Federico",
