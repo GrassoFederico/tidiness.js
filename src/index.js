@@ -6,7 +6,7 @@ import {
     isUndefined
 } from "lodash"
 
-Object.values(document.querySelectorAll('*[colorize]')).map((jsonElement) => {
+Object.values(document.querySelectorAll('*[tidy-up]')).map((jsonElement) => {
     let jsonObject = JSON.parse(jsonElement.innerHTML)
     let text = document.createElement('code')
 
