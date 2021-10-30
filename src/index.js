@@ -18,26 +18,24 @@ Object.values(document.querySelectorAll('*[tidy-up]')).map((jsonElement) => {
         if( isArray(value) ) {
             value = jsonNode(Object.entries(value), (indent + 1))
 
-            value = `[${value}],`
+            value = `[${value.substring( 0, (value.length - 1) )}]`
         }
         else if (isObject(value)) {
             value = jsonNode(Object.entries(value), (indent + 1))
-
-            value = `{${value}<span style="text-indent:${indent}ch; display: inline-block">},</span>`
+            
+            value = `{${value.substring( 0, (value.length - ( '</span>'.length + 1 )) )}</span><span style="text-indent:${indent}ch; display: inline-block">}</span>`
         } 
         else if (isNaN(value))
-            value = `<span style="color: #F43F5E">"${value}"</span>,`
+            value = `<span style="color: #F43F5E">"${value}"</span>`
         else if (isBoolean(value) || isUndefined(value) || isNull(value))
-            value = `<span style="color: #EC4899; font-weight: bold">${value}</span>,`
+            value = `<span style="color: #EC4899; font-weight: bold">${value}</span>`
         else
-            value = `<span style="color: #78716C">${value}</span>,`
+            value = `<span style="color: #78716C">${value}</span>`
 
         if( isNaN( key ) )
-            return `<span style="text-indent:${indent}ch; display: block; white-space: nowrap;">
-                        <span style="color: #0EA5E9">"${key}":</span> ${value}
-                    </span>`
+            return `<span style="text-indent:${indent}ch; display: block; white-space: nowrap;"><span style="color: #0EA5E9">"${key}":</span> ${value},</span>`
         else
-            return `${value}`
+            return `${value},`
     }
 
     const jsonNode = (array, indentDepth = 1) => {
