@@ -18,12 +18,12 @@ Object.values(document.querySelectorAll('*[tidy-up]')).map((jsonElement) => {
         if( isArray(value) ) {
             value = jsonNode(Object.entries(value), (indent + 1))
 
-            value = `[${value}<span style="text-indent:${indent}rem; display: block;">],</span>`
+            value = `[${value}],`
         }
         else if (isObject(value)) {
             value = jsonNode(Object.entries(value), (indent + 1))
 
-            value = `{${value}<span style="text-indent:${indent}rem; display: block;">},</span>`
+            value = `{${value}<span style="text-indent:${indent}rem; display: inline-block">},</span>`
         } 
         else if (isNaN(value))
             value = `<span style="color: #F43F5E">"${value}"</span>,`
@@ -37,9 +37,7 @@ Object.values(document.querySelectorAll('*[tidy-up]')).map((jsonElement) => {
                         <span style="color: #0EA5E9">"${key}":</span> ${value}
                     </span>`
         else
-            return `<span style="text-indent:${indent}rem; display: block; white-space: nowrap;">
-                        ${value}
-                    </span>`
+            return `${value}`
     }
 
     const jsonNode = (array, indentDepth = 1) => {
