@@ -3,7 +3,8 @@ import {
     isBoolean,
     isNull,
     isObject,
-    isUndefined
+    isUndefined,
+    isString
 } from "lodash"
 
 Object.values(document.querySelectorAll('*[tidy-up]')).map((jsonElement) => {
@@ -25,8 +26,8 @@ Object.values(document.querySelectorAll('*[tidy-up]')).map((jsonElement) => {
             
             value = `{${value.substring( 0, (value.length - ( '</span>'.length + 1 )) )}</span><span style="text-indent:${indent}ch; display: inline-block">}</span>`
         } 
-        else if (isNaN(value))
-            value = `<span style="color: #F43F5E">"${value}"</span>`
+        else if (isString(value))
+            value = `<span style="color: #F43F5E">${JSON.stringify(value)}</span>`
         else if (isBoolean(value) || isUndefined(value) || isNull(value))
             value = `<span style="color: #EC4899; font-weight: bold">${value}</span>`
         else
