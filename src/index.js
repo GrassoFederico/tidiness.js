@@ -47,7 +47,8 @@ Object.values(document.querySelectorAll('*[tidy-up]')).map((jsonElement) => {
         }).join('')
     }
 
-    text.innerHTML = `{${jsonNode(Object.entries(jsonObject))}}`
+    let content = jsonNode(Object.entries(jsonObject))
+    text.innerHTML = `{${ content.substring( 0, (content.length - ('</span>'.length + 1)) ) }</span>}`
 
     jsonElement.replaceChildren( text )
 })
